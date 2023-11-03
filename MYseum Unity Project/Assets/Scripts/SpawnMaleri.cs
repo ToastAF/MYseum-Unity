@@ -16,14 +16,16 @@ public class SpawnMaleri : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    public void spawnMaleri()
+    {
         if(isMonaLisaSpawned == false)
-        {
-            if (Input.GetKeyDown(KeyCode.M))
             {
                 GameObject monaLisaClone = Instantiate(MonaLisa, spawnLocation, Quaternion.identity);
                 monaLisaClone.transform.Rotate(new Vector3(0, 0, 40));
                 isMonaLisaSpawned = true;
             }
-        }
     }
 }
