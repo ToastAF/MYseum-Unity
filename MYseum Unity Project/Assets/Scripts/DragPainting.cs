@@ -12,10 +12,10 @@ public class DragPainting : MonoBehaviour
     {
         zCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
         rb = GetComponent<Rigidbody>();
-        offset = gameObject.transform.position - getMousePos();
+        offset = gameObject.transform.position - GetMousePos();
     }
 
-    Vector3 getMousePos()
+    Vector3 GetMousePos()
     {
         Vector3 mousePoint = Input.mousePosition;
 
@@ -26,7 +26,7 @@ public class DragPainting : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        transform.position = getMousePos() + offset;
+        transform.position = GetMousePos() + offset;
         rb.velocity = Vector3.zero;
     }
 }
