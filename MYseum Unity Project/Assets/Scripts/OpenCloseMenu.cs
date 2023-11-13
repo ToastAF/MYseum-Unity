@@ -9,7 +9,7 @@ public class OpenCloseMenu : MonoBehaviour
 
     void Start()
     {
-        
+        menu.SetActive(false);
     }
 
     void Update()

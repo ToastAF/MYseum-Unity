@@ -13,7 +13,7 @@ public class SpawnMaleri : MonoBehaviour
         if(isMonaLisaSpawned == false)
             {
                 GameObject monaLisaClone = Instantiate(MonaLisa, spawnLocation, Quaternion.identity);
-                monaLisaClone.transform.Rotate(new Vector3(0, 0, 40));
+                //monaLisaClone.transform.Rotate(new Vector3(0, 0, 40));
                 isMonaLisaSpawned = true;
             }
     }
