@@ -30,7 +30,10 @@ public class TestDrag : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 100, floor))
         {
             transform.position = new Vector3(hit.point.x, hit.point.y+(transform.localScale.y/2), hit.point.z);
-            transform.Rotate(0, 90*Time.deltaTime, 0); //Den her er bare for sjov. Den drejer objektet, hvis man holder den nede på gulvet :)
+            if (Input.GetKey(KeyCode.R))
+            {
+                transform.Rotate(0, 90*Time.deltaTime, 0); //Den her er bare for sjov. Den drejer objektet, hvis man holder den nede på gulvet og holder R nede :)
+            }
         }
     }
 }
