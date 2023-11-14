@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveObject : MonoBehaviour
 {
+    //DEPRICATED CODE! Denne kode bruges ikke!
     public GameObject currentPainting;
     
     public void MoveXpos()

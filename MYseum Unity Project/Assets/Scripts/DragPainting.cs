@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DragPainting : MonoBehaviour
 {
+    //DEPRICATED CODE! Denne kode bruges ikke!
     Vector3 offset;
     float zCoord;
     Rigidbody rb;

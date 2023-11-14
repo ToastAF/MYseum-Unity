@@ -4,26 +4,30 @@ using UnityEngine;
 
 public class SpawnMaleri : MonoBehaviour
 {
+    //Et GameObject for hvert maleri
     public GameObject MonaLisa, Babel, MonetBridge, Sunset, Wanderer, PearlEarring, Umbrella, AlmondBlossoms, Restaurant, StarryNight;
+    //En redigerbar vektor, som kan skiftes i inspektoren. Vektoren styrer, hvor malerierne spawner
     public Vector3 spawnLocation;
+    //Virkelig lang linje, som bare er variabler, der tjekker, om maleriet er spawnet.
     bool isMonaLisaSpawned, isBabelSpawned, isMonetBridgeSpawned, isSunsetSpawned, isWandererSpawned, isPearlEarringSpawned, isUmbrellaSpawned, isAlmondBlossomsSpawned, isRestaurantSpawned, isStarryNightSpawned;
 
+    //Der er en funktion til hvert maleri. Disse funktioner bliver kaldt med buttons i UI. Selve SpawnMaleri.cs sidder på det GameObject, der hedder Scripthandler
     public void spawnMonaLisa()
     {
+        //Der bliver tjekket, om maleriet er spawnet i forvejen
         if(isMonaLisaSpawned == false)
-            {
-                GameObject monaLisaClone = Instantiate(MonaLisa, spawnLocation, Quaternion.identity);
-                //monaLisaClone.transform.Rotate(new Vector3(0, 0, 40));
-                isMonaLisaSpawned = true;
-            }
+        {
+            //Hvis den ikke er, så spawner vi det
+            Instantiate(MonaLisa, spawnLocation, Quaternion.identity);
+            isMonaLisaSpawned = true; //Og så sættes den her til true, så der kUN KAN VÆRE ET MALERI!
+        }
     }
-
+    //Alle de andre funktioner er det samme, bare med de andre maleriers navne :)
     public void spawnBabel()
     {
         if (isBabelSpawned == false)
         {
-            GameObject babelClone = Instantiate(Babel, spawnLocation, Quaternion.identity);
-            babelClone.transform.Rotate(new Vector3(0, 0, 40));
+            Instantiate(Babel, spawnLocation, Quaternion.identity);
             isBabelSpawned = true;
         }
     }
@@ -32,8 +36,7 @@ public class SpawnMaleri : MonoBehaviour
     {
         if (isMonetBridgeSpawned == false)
         {
-            GameObject monetBridgeClone = Instantiate(MonetBridge, spawnLocation, Quaternion.identity);
-            monetBridgeClone.transform.Rotate(new Vector3(0, 0, 40));
+            Instantiate(MonetBridge, spawnLocation, Quaternion.identity);
             isMonetBridgeSpawned = true;
         }
     }
@@ -42,8 +45,7 @@ public class SpawnMaleri : MonoBehaviour
     {
         if (isSunsetSpawned == false)
         {
-            GameObject sunsetClone = Instantiate(Sunset, spawnLocation, Quaternion.identity);
-            sunsetClone.transform.Rotate(new Vector3(0, 0, 40));
+            Instantiate(Sunset, spawnLocation, Quaternion.identity);
             isSunsetSpawned = true;
         }
     }
@@ -52,8 +54,7 @@ public class SpawnMaleri : MonoBehaviour
     {
         if (isWandererSpawned == false)
         {
-            GameObject wandererClone = Instantiate(Wanderer, spawnLocation, Quaternion.identity);
-            wandererClone.transform.Rotate(new Vector3(0, 0, 40));
+            Instantiate(Wanderer, spawnLocation, Quaternion.identity);
             isWandererSpawned = true;
         }
     }
@@ -62,8 +63,7 @@ public class SpawnMaleri : MonoBehaviour
     {
         if (isPearlEarringSpawned == false)
         {
-            GameObject PearlEarringClone = Instantiate(PearlEarring, spawnLocation, Quaternion.identity);
-            PearlEarringClone.transform.Rotate(new Vector3(0, 0, 40));
+            Instantiate(PearlEarring, spawnLocation, Quaternion.identity);
             isPearlEarringSpawned = true;
         }
     }
@@ -72,8 +72,7 @@ public class SpawnMaleri : MonoBehaviour
     {
         if (isUmbrellaSpawned == false)
         {
-            GameObject clone = Instantiate(Umbrella, spawnLocation, Quaternion.identity);
-            clone.transform.Rotate(new Vector3(0, 0, 40));
+            Instantiate(Umbrella, spawnLocation, Quaternion.identity);
             isUmbrellaSpawned = true;
         }
     }
@@ -82,8 +81,7 @@ public class SpawnMaleri : MonoBehaviour
     {
         if (isAlmondBlossomsSpawned == false)
         {
-            GameObject clone = Instantiate(AlmondBlossoms, spawnLocation, Quaternion.identity);
-            clone.transform.Rotate(new Vector3(0, 0, 40));
+            Instantiate(AlmondBlossoms, spawnLocation, Quaternion.identity);
             isAlmondBlossomsSpawned = true;
         }
     }
@@ -92,8 +90,7 @@ public class SpawnMaleri : MonoBehaviour
     {
         if (isRestaurantSpawned == false)
         {
-            GameObject clone = Instantiate(Restaurant, spawnLocation, Quaternion.identity);
-            clone.transform.Rotate(new Vector3(0, 0, 40));
+            Instantiate(Restaurant, spawnLocation, Quaternion.identity);
             isRestaurantSpawned = true;
         }
     }
@@ -102,8 +99,7 @@ public class SpawnMaleri : MonoBehaviour
     {
         if (isStarryNightSpawned == false)
         {
-            GameObject clone = Instantiate(StarryNight, spawnLocation, Quaternion.identity);
-            clone.transform.Rotate(new Vector3(0, 0, 40));
+            Instantiate(StarryNight, spawnLocation, Quaternion.identity);
             isStarryNightSpawned = true;
         }
     }
