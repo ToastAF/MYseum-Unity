@@ -8,7 +8,8 @@ public class CheckButton : MonoBehaviour
     public void UnclickPainting()
     {
         painting.GetComponent<PaintingScript>().isClicked = false;
-        Destroy(gameObject);
         Destroy(infoText);
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnMaleri>().editMode = false;
+        Destroy(gameObject);
     }
 }

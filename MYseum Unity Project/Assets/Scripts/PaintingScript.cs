@@ -9,10 +9,12 @@ public class PaintingScript : MonoBehaviour
 
     public bool isClicked;
     public GameObject checkButton, infoText;
+    SpawnMaleri scriptHandler;
 
     private void Start()
     {
         isClicked = false;
+        scriptHandler = GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnMaleri>();
     }
 
     //OnMouseDrag kaldes, når man har musen over objektets collider, holder musen inde og ikke slipper
@@ -50,18 +52,22 @@ public class PaintingScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (isClicked == false)
+        if(scriptHandler.editMode == false)
         {
-            isClicked = true;
-            GameObject temp = Instantiate(checkButton, GameObject.FindGameObjectWithTag("Canvas").transform);
-            temp.GetComponent<RectTransform>().anchoredPosition = new Vector2(-410, 190);
-            temp.GetComponent<CheckButton>().painting = gameObject;
-
-            if(infoText != null)
+            scriptHandler.editMode = true;
+            if (isClicked == false)
             {
-                GameObject tempText = Instantiate(infoText, GameObject.FindGameObjectWithTag("Canvas").transform);
-                tempText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-243, -126);
-                temp.GetComponent<CheckButton>().infoText = tempText;
+                isClicked = true;
+                GameObject temp = Instantiate(checkButton, GameObject.FindGameObjectWithTag("Canvas").transform);
+                temp.GetComponent<RectTransform>().anchoredPosition = new Vector2(-410, 190);
+                temp.GetComponent<CheckButton>().painting = gameObject;
+
+                if (infoText != null)
+                {
+                    GameObject tempText = Instantiate(infoText, GameObject.FindGameObjectWithTag("Canvas").transform);
+                    tempText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-243, -126);
+                    temp.GetComponent<CheckButton>().infoText = tempText;
+                }
             }
         }
     }

@@ -13,6 +13,12 @@ public class SpawnMaleri : MonoBehaviour
     //Virkelig lang linje, som bare er variabler, der tjekker, om maleriet er spawnet.
     bool isMonaLisaSpawned, isBabelSpawned, isMonetBridgeSpawned, isSunsetSpawned, isWandererSpawned, isPearlEarringSpawned, isUmbrellaSpawned, isAlmondBlossomsSpawned, isRestaurantSpawned, isStarryNightSpawned;
 
+    public bool editMode;
+    private void Start()
+    {
+        editMode = false;
+    }
+
     //Der er en funktion til hvert maleri. Disse funktioner bliver kaldt med buttons i UI. Selve SpawnMaleri.cs sidder på det GameObject, der hedder Scripthandler
     public void spawnMonaLisa()
     {
@@ -21,7 +27,7 @@ public class SpawnMaleri : MonoBehaviour
         {
             //Hvis den ikke er, så spawner vi det
             GameObject temp = Instantiate(MonaLisa, spawnLocation, Quaternion.identity);
-            temp.GetComponent<PaintingScript>().infoText = MLText;
+            temp.GetComponent<PaintingScript>().infoText = MLText; //Vi skal tilgå tekst objektet i et andet script PaintingScript
             isMonaLisaSpawned = true; //Og så sættes den her til true, så der kUN KAN VÆRE ET MALERI!
         }
     }
