@@ -14,6 +14,9 @@ public class SpawnMaleri : MonoBehaviour
     bool isMonaLisaSpawned, isBabelSpawned, isMonetBridgeSpawned, isSunsetSpawned, isWandererSpawned, isPearlEarringSpawned, isUmbrellaSpawned, isAlmondBlossomsSpawned, isRestaurantSpawned, isStarryNightSpawned;
 
     public bool editMode;
+
+    public int number;
+
     private void Start()
     {
         editMode = false;
@@ -119,6 +122,57 @@ public class SpawnMaleri : MonoBehaviour
             GameObject temp = Instantiate(StarryNight, spawnLocation, Quaternion.identity);
             temp.GetComponent<PaintingScript>().infoText = SNText;
             isStarryNightSpawned = true;
+        }
+    }
+
+    public void spawnNumberedPainting(int receivedData)
+    {
+        if(receivedData == 0)
+        {
+            spawnAlmondBlossoms();
+            print("I WOrk!");
+        }
+        else if(receivedData == 1)
+        {
+            spawnBabel();
+        }
+        else if(receivedData == 2)
+        {
+            spawnRestaurant();
+        }
+        else if (receivedData == 3)
+        {
+
+            spawnMonaLisa();
+        }
+        else if (receivedData == 4)
+        {
+            spawnMonetBridge();
+        }
+        else if (receivedData == 5)
+        {
+            spawnPearlEarring();
+        }
+        else if (receivedData == 6)
+        {
+
+            spawnStarryNight();
+        }
+        else if (receivedData == 7)
+        {
+            spawnSunset();
+        }
+        else if (receivedData == 8)
+        {
+            spawnUmbrella();
+        }
+        else if (receivedData == 9)
+        {
+            spawnWanderer();
+        }
+        else
+        {
+            print("Poop! It didn't work...");
         }
     }
 }
