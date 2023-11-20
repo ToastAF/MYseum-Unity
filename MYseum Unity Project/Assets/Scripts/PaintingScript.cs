@@ -62,7 +62,7 @@ public class PaintingScript : MonoBehaviour
                 temp.GetComponent<RectTransform>().anchoredPosition = new Vector2(-410, 190);
                 temp.GetComponent<CheckButton>().painting = gameObject;
 
-                if (infoText != null)
+                if (infoText != null) //Hvis der er ikke er assigned et tekst objekt, skipper vi bare der her kode under. Dette bruges til potteplanten (ting uden tekst)
                 {
                     GameObject tempText = Instantiate(infoText, GameObject.FindGameObjectWithTag("Canvas").transform);
                     tempText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-243, -126);

@@ -33,4 +33,9 @@ public class OpenCloseMenu : MonoBehaviour
             }
         }
     }
+
+    public void CloseMenu()
+    {
+        menu.SetActive(false);
+    }
 }
