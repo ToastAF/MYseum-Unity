@@ -46,7 +46,7 @@ public class PythonToUnity : MonoBehaviour
             Debug.Log("Client connected");
 
             // Continuously receive and handle messages from the client
-            byte[] message = new byte[16]; // Assuming messages are 4 bytes (int size)
+            byte[] message = new byte[4]; // Assuming messages are 4 bytes (int size)
             int bytesRead;
 
             while (true)
@@ -60,11 +60,15 @@ public class PythonToUnity : MonoBehaviour
                         int receivedData = BytesToInt(message);
                         Debug.Log($"Received data from Python: {receivedData}");
 
-                        scr.number = receivedData;
+                        UnityMainThreadDispatcher.Instance().Enqueue(() =>
+                        {
+                            scr.spawnNumberedPainting(receivedData);
+                        });
 
                         // Optionally, you can send a response back to the Python client
                         int responseData = receivedData; // Modify or process the received data
-                        byte[] responseMessage = IntToBytes(responseData);
+                        byte[] responseMessage = IntToBytes(responseData); //Ændr
+                        print(responseMessage);
                         clientStream.Write(responseMessage, 0, responseMessage.Length);
                         clientStream.Flush();
 
@@ -72,7 +76,7 @@ public class PythonToUnity : MonoBehaviour
                         //GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnMaleri>().spawnNumberedPainting(receivedData);
                     }
                 }
-                catch
+                catch //Måske få den til at sleep
                 {
                     // Handle disconnect or errors
                     Debug.Log("Client disconnected");
