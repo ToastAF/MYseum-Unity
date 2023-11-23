@@ -61,16 +61,6 @@ public class PythonToUnity : MonoBehaviour
                         Debug.Log($"Received data from Python: {receivedData}");
 
                         SpawnPainting(receivedData);
-
-                        // Optionally, you can send a response back to the Python client
-                        /*int responseData = receivedData; // Modify or process the received data
-                        byte[] responseMessage = IntToBytes(responseData); //Ændr
-                        print(responseMessage);
-                        clientStream.Write(responseMessage, 0, responseMessage.Length);
-                        clientStream.Flush();*/
-
-                        //Den her virker ikke somehow. Det er som om, at den tager for lang tid at køre...
-                        //GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnMaleri>().spawnNumberedPainting(receivedData);
                     }
                 }
                 catch
