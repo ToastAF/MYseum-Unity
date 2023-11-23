@@ -7,7 +7,7 @@ public class SpawnMaleri : MonoBehaviour
     //Dette script er ret langt, fordi det er hardcoded, men jeg ved ikke hvordan jeg skulle forkorte det
     //Et GameObject for hvert maleri og dets tekst
     public GameObject MonaLisa, Babel, MonetBridge, Sunset, Wanderer, PearlEarring, Umbrella, AlmondBlossoms, Restaurant, StarryNight;
-    public GameObject MLText, BText, MBText, SText, WText, PEText, UText, ABText, RText, RestText, SNText;
+    public GameObject MLText, BText, MBText, SText, WText, PEText, UText, ABText, RestText, SNText;
     //En redigerbar vektor, som kan skiftes i inspektoren. Vektoren styrer, hvor malerierne spawner
     public Vector3 spawnLocation;
     //Virkelig lang linje, som bare er variabler, der tjekker, om maleriet er spawnet.

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465781, g: 0.49641496, b: 0.5748166, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465785, g: 0.4964152, b: 0.5748176, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6094,16 +6094,15 @@ MonoBehaviour:
   Restaurant: {fileID: 3273166776324463429, guid: 058f832d6c5267841940bf7653680747, type: 3}
   StarryNight: {fileID: 3273166776324463429, guid: 955d7013dcaf08648908422e8c60bb01, type: 3}
   MLText: {fileID: 4678985428718776412, guid: 1a192ea9b6fe4b64b9b8be6b98b686f7, type: 3}
-  BText: {fileID: 4678985428718776412, guid: 1a192ea9b6fe4b64b9b8be6b98b686f7, type: 3}
-  MBText: {fileID: 4678985428718776412, guid: 1a192ea9b6fe4b64b9b8be6b98b686f7, type: 3}
-  SText: {fileID: 4678985428718776412, guid: 1a192ea9b6fe4b64b9b8be6b98b686f7, type: 3}
-  WText: {fileID: 4678985428718776412, guid: 1a192ea9b6fe4b64b9b8be6b98b686f7, type: 3}
-  PEText: {fileID: 4678985428718776412, guid: 1a192ea9b6fe4b64b9b8be6b98b686f7, type: 3}
-  UText: {fileID: 4678985428718776412, guid: 1a192ea9b6fe4b64b9b8be6b98b686f7, type: 3}
-  ABText: {fileID: 4678985428718776412, guid: 1a192ea9b6fe4b64b9b8be6b98b686f7, type: 3}
-  RText: {fileID: 4678985428718776412, guid: 1a192ea9b6fe4b64b9b8be6b98b686f7, type: 3}
+  BText: {fileID: 4678985428718776412, guid: 5c013bfe7e2b21342b22a4ecd56924c7, type: 3}
+  MBText: {fileID: 4678985428718776412, guid: 61b0e589a43da5e4eb24cebd44e16068, type: 3}
+  SText: {fileID: 4678985428718776412, guid: 90dcc1042b628804cbc17f59f6f9bb66, type: 3}
+  WText: {fileID: 4678985428718776412, guid: 841956dd29cd598449e5a7f0eae1062e, type: 3}
+  PEText: {fileID: 4678985428718776412, guid: ef2450f23142ab14e93c8d18d34db59d, type: 3}
+  UText: {fileID: 4678985428718776412, guid: 07b4a5a136346fd478f0ac6877cfac07, type: 3}
+  ABText: {fileID: 4678985428718776412, guid: 0433f55bdf811d841a222ad8b4c93c43, type: 3}
   RestText: {fileID: 4678985428718776412, guid: 1a192ea9b6fe4b64b9b8be6b98b686f7, type: 3}
-  SNText: {fileID: 4678985428718776412, guid: 1a192ea9b6fe4b64b9b8be6b98b686f7, type: 3}
+  SNText: {fileID: 4678985428718776412, guid: 861a4190b7064f14b9042f97e1ac11c1, type: 3}
   spawnLocation: {x: -1, y: 3, z: 1}
   editMode: 0
   number: 0

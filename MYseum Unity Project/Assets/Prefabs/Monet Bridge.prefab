@@ -130,7 +130,7 @@ MonoBehaviour:
     m_Bits: 256
   isClicked: 0
   checkButton: {fileID: 144462807072296416, guid: b31bedb05e02ea74d89e1bb9bde87f81, type: 3}
-  infoText: {fileID: 0}
+  infoText: {fileID: 4678985428718776412, guid: 61b0e589a43da5e4eb24cebd44e16068, type: 3}
 --- !u!1 &7462547202081516472
 GameObject:
   m_ObjectHideFlags: 0
