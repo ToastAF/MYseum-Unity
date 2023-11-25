@@ -8,7 +8,7 @@ public class PaintingScript : MonoBehaviour
     public LayerMask wall, wall2, floor;
 
     public bool isClicked;
-    public GameObject checkButton, infoText;
+    public GameObject checkButton, infoText, linkedCamera;
     SpawnMaleri scriptHandler;
 
     private void Start()
@@ -68,6 +68,14 @@ public class PaintingScript : MonoBehaviour
                     tempText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-243, -126);
                     temp.GetComponent<CheckButton>().infoText = tempText;
                 }
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            if(linkedCamera != null)
+            {
+                   linkedCamera.SetActive(true);
             }
         }
     }
