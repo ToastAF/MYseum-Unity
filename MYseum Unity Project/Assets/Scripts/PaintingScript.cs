@@ -7,14 +7,26 @@ public class PaintingScript : MonoBehaviour
     //Vi vælger de to vægge og gulvet til at have 3 forskellige lag
     public LayerMask wall, wall2, floor;
 
-    public bool isClicked;
+    public bool isClicked, isViewed;
     public GameObject checkButton, infoText, linkedCamera;
     SpawnMaleri scriptHandler;
+
+    GameObject closeButton;
+    GameObject canvas;
+    float h, w;
 
     private void Start()
     {
         isClicked = false;
+        isViewed = false;
+        if(linkedCamera != null)
+        {
+            linkedCamera.SetActive(false);
+        }
         scriptHandler = GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnMaleri>();
+        canvas = GameObject.FindGameObjectWithTag("Canvas");
+        h = canvas.GetComponent<RectTransform>().rect.height;
+        w = canvas.GetComponent<RectTransform>().rect.width;
     }
 
     //OnMouseDrag kaldes, når man har musen over objektets collider, holder musen inde og ikke slipper
@@ -52,30 +64,39 @@ public class PaintingScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(scriptHandler.editMode == false)
+        if(scriptHandler.editMode == false && isViewed == false)
         {
             scriptHandler.editMode = true;
             if (isClicked == false)
             {
                 isClicked = true;
-                GameObject temp = Instantiate(checkButton, GameObject.FindGameObjectWithTag("Canvas").transform);
-                temp.GetComponent<RectTransform>().anchoredPosition = new Vector2(240, 140); //(-410, 190)
-                temp.GetComponent<CheckButton>().painting = gameObject;
-
-                if (infoText != null) //Hvis der er ikke er assigned et tekst objekt, skipper vi bare der her kode under. Dette bruges til potteplanten (ting uden tekst)
-                {
-                    GameObject tempText = Instantiate(infoText, GameObject.FindGameObjectWithTag("Canvas").transform);
-                    tempText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-243, -126);
-                    temp.GetComponent<CheckButton>().infoText = tempText;
-                }
+                closeButton = Instantiate(checkButton, canvas.transform);
+                closeButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(-w*0.43f, h*0.43f); //(-410, 190)
+                closeButton.GetComponent<CheckButton>().painting = gameObject;
             }
         }
 
+    }
+
+    private void OnMouseOver()
+    {
+        
         if (Input.GetMouseButtonDown(1))
         {
-            if(linkedCamera != null)
+            if(linkedCamera != null && infoText != null)
             {
-                   linkedCamera.SetActive(true);
+                if(isViewed == false && isClicked == false)
+                {
+                    linkedCamera.SetActive(true);
+                    isViewed = true;
+                    GameObject tempText = Instantiate(infoText, canvas.transform);
+                    closeButton = Instantiate(checkButton, canvas.transform);
+                    closeButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(-w * 0.43f, h * 0.43f); //(-410, 190)
+                    tempText.GetComponent<RectTransform>().anchoredPosition = new Vector2(w*0.25f, h*0.25f);
+                    closeButton.GetComponent<CheckButton>().painting = gameObject;
+                    closeButton.GetComponent<CheckButton>().infoText = tempText;
+                    closeButton.GetComponent<CheckButton>().paintingCam = linkedCamera;
+                }
             }
         }
     }

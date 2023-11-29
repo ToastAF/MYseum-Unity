@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.4964152, b: 0.5748176, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465781, g: 0.49641496, b: 0.5748166, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4018,8 +4018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -307, y: 61}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -220.9, y: 28.049}
+  m_SizeDelta: {x: 441.7997, y: 56.0975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1051049388
 MonoBehaviour:
@@ -4041,7 +4041,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click and drag objects to move them
+  m_text: 'Left click and drag objects to move them
+
+    Right click to enter view
+    mode'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4104,7 +4107,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 52.939514, z: -198.55371, w: -36.544098}
+  m_margin: {x: 0, y: 0.5005951, z: 1.6259155, w: 0.650959}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6101,7 +6104,7 @@ MonoBehaviour:
   PEText: {fileID: 4678985428718776412, guid: ef2450f23142ab14e93c8d18d34db59d, type: 3}
   UText: {fileID: 4678985428718776412, guid: 07b4a5a136346fd478f0ac6877cfac07, type: 3}
   ABText: {fileID: 4678985428718776412, guid: 0433f55bdf811d841a222ad8b4c93c43, type: 3}
-  RestText: {fileID: 4678985428718776412, guid: 1a192ea9b6fe4b64b9b8be6b98b686f7, type: 3}
+  RestText: {fileID: 4678985428718776412, guid: a35b432ce5f4c11419a88d7466eca4b9, type: 3}
   SNText: {fileID: 4678985428718776412, guid: 861a4190b7064f14b9042f97e1ac11c1, type: 3}
   spawnLocation: {x: -1, y: 3, z: 1}
   editMode: 0
@@ -7221,8 +7224,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 109, y: 61}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 234.6, y: 14.587}
+  m_SizeDelta: {x: 469.1964, y: 29.1731}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1807493039
 MonoBehaviour:
@@ -7244,7 +7247,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press 'esc' to open and close menu
+  m_text: Press 'esc' to open and close spawn menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7307,7 +7310,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 52.939514, z: -198.55371, w: -36.544098}
+  m_margin: {x: 0, y: -1.9807682, z: 1.7963562, w: 1.5992546}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -8214,7 +8217,7 @@ Transform:
   m_GameObject: {fileID: 711223137513823999}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 0.5, z: -4.6694975}
+  m_LocalPosition: {x: 1.01, y: 0.5, z: 0.53}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8266,8 +8269,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   isClicked: 0
+  isViewed: 0
   checkButton: {fileID: 144462807072296416, guid: b31bedb05e02ea74d89e1bb9bde87f81, type: 3}
   infoText: {fileID: 0}
+  linkedCamera: {fileID: 0}
 --- !u!65 &711223137513824001
 BoxCollider:
   m_ObjectHideFlags: 0
