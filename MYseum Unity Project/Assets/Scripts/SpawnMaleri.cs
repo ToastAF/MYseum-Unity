@@ -134,24 +134,23 @@ public class SpawnMaleri : MonoBehaviour
         }
         else if(receivedData == 1)
         {
-            spawnBabel();
+            spawnRestaurant();
         }
         else if(receivedData == 2)
         {
-            spawnRestaurant();
+            spawnPearlEarring();
         }
         else if (receivedData == 3)
         {
-
-            spawnMonaLisa();
+            spawnSunset();         
         }
         else if (receivedData == 4)
         {
-            spawnMonetBridge();
+            spawnMonaLisa();
         }
         else if (receivedData == 5)
         {
-            spawnPearlEarring();
+            spawnMonetBridge();
         }
         else if (receivedData == 6)
         {
@@ -160,15 +159,15 @@ public class SpawnMaleri : MonoBehaviour
         }
         else if (receivedData == 7)
         {
-            spawnSunset();
+            spawnBabel();            
         }
         else if (receivedData == 8)
         {
-            spawnUmbrella();
+            spawnWanderer();
         }
         else if (receivedData == 9)
         {
-            spawnWanderer();
+            spawnUmbrella();
         }
         else
         {
