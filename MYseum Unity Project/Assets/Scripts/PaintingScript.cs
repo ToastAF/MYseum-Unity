@@ -23,6 +23,7 @@ public class PaintingScript : MonoBehaviour
         {
             linkedCamera.SetActive(false);
         }
+
         scriptHandler = GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnMaleri>();
         canvas = GameObject.FindGameObjectWithTag("Canvas");
         h = canvas.GetComponent<RectTransform>().rect.height;
@@ -91,7 +92,7 @@ public class PaintingScript : MonoBehaviour
                     isViewed = true;
                     GameObject tempText = Instantiate(infoText, canvas.transform);
                     closeButton = Instantiate(checkButton, canvas.transform);
-                    closeButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(-w * 0.43f, h * 0.43f); //(-410, 190)
+                    closeButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(-w * 0.43f, h * 0.43f);
                     tempText.GetComponent<RectTransform>().anchoredPosition = new Vector2(w*0.25f, h*0.25f);
                     closeButton.GetComponent<CheckButton>().painting = gameObject;
                     closeButton.GetComponent<CheckButton>().infoText = tempText;

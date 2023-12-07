@@ -16,7 +16,6 @@ public class NewMainThreadDispatcher : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         instance = this;
         DontDestroyOnLoad(gameObject);
     }

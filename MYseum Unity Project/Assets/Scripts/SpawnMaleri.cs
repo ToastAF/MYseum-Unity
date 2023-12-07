@@ -12,9 +12,7 @@ public class SpawnMaleri : MonoBehaviour
     public Vector3 spawnLocation;
     //Virkelig lang linje, som bare er variabler, der tjekker, om maleriet er spawnet.
     bool isMonaLisaSpawned, isBabelSpawned, isMonetBridgeSpawned, isSunsetSpawned, isWandererSpawned, isPearlEarringSpawned, isUmbrellaSpawned, isAlmondBlossomsSpawned, isRestaurantSpawned, isStarryNightSpawned;
-
     public bool editMode;
-
     public int number;
 
     private void Start()
@@ -130,7 +128,6 @@ public class SpawnMaleri : MonoBehaviour
         if(receivedData == 0)
         {
             spawnAlmondBlossoms();
-            print("I WOrk!");
         }
         else if(receivedData == 1)
         {

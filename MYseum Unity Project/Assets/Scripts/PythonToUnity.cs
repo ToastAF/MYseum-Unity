@@ -26,9 +26,7 @@ public class PythonToUnity : MonoBehaviour
     {
         server = new TcpListener(IPAddress.Any, 5555);
         server.Start();
-
         Debug.Log("Server listening on port 5555");
-
         listenerThread = new Thread(new ThreadStart(ListenForClients));
         listenerThread.Start();
     }
@@ -54,12 +52,11 @@ public class PythonToUnity : MonoBehaviour
                 try
                 {
                     bytesRead = clientStream.Read(message, 0, message.Length);
-
                     if (bytesRead > 0)
                     {
                         int receivedData = BytesToInt(message);
                         Debug.Log($"Received data from Python: {receivedData}");
-
+                        //Run the method that spawns a painting
                         SpawnPainting(receivedData);
                     }
                 }
@@ -75,6 +72,7 @@ public class PythonToUnity : MonoBehaviour
         }
     }
 
+    //This is the method that queues an action to be run on the main thread
     private void SpawnPainting(int number)
     {
         NewMainThreadDispatcher.ExecuteInUpdate(() =>

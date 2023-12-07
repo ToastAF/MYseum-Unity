@@ -10,7 +10,7 @@ public class OpenCloseMenu : MonoBehaviour
 
     void Start()
     {
-        //Menuen lukkes til at starte med
+        //Close the menu on start 
         menu.SetActive(false);
     }
 
